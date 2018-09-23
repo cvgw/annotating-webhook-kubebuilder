@@ -64,5 +64,11 @@ func (a *podAnnotator) InjectDecoder(d types.Decoder) error {
 func (a *podAnnotator) mutatePodsFn(ctx context.Context, copy *corev1.Pod) error {
 	log.Println("I got a request")
 
+	if copy.Annotations == nil {
+		copy.Annotations = make(map[string]string)
+	}
+
+	copy.Annotations["test-webhook-annotation"] = "meow"
+
 	return nil
 }

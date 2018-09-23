@@ -21,6 +21,7 @@ $ ./install_kubebuilder.sh
 cd ./src
 export IMG=your-image-name
 make docker-build
+make docker-push
 make manifests
 kustomize build config/default | kubectl apply -f -
 ````
