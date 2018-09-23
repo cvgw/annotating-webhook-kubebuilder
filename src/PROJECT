@@ -1,0 +1,3 @@
+version: "1"
+domain: nomsmon.com
+repo: github.com/cvgw/annotating-webhook-kubebuilder/src
